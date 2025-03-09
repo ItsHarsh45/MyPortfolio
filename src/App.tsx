@@ -708,7 +708,7 @@ function App() {
       {/* Footer */}
       <footer className={`py-6 border-t ${theme.border} ${theme.bg}`}>
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <p className={`${theme.textMuted} text-sm`}>© {new Date().getFullYear()} Chanabasappa. All rights reserved.</p>
+          <p className={`${theme.textMuted} text-sm`}>© {new Date().getFullYear()} Designed & Developed by Chanabasappa.</p>
         </div>
       </footer>
     </div>
