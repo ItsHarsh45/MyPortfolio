@@ -220,14 +220,14 @@ function App() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3">
-              <a href="https://drive.google.com/uc?export=download&id=1OhfzHrzsWdgRSCWHgfISYSax93PeWr6l" target="_blank" rel="noopener noreferrer">
-                <button className={`px-4 py-2 ${theme.highlight} font-medium text-sm transition-all duration-200 ${theme.highlightHover} flex items-center justify-center gap-2 ${theme.glowEffect}`}>
+              <a href="https://drive.google.com/file/d/1OhfzHrzsWdgRSCWHgfISYSax93PeWr6l/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <button className={`w-full sm:w-36 px-4 py-2 ${theme.highlight} font-medium text-sm transition-all duration-200 ${theme.highlightHover} flex items-center justify-center gap-2 ${theme.glowEffect}`}>
                   Download CV <FileText size={14} />
                 </button>
               </a>
-              <button 
-                onClick={() => scrollToSection('contact')} 
-                className={`px-4 py-2 border ${theme.border} font-medium text-sm transition-all duration-200 ${isDarkTheme ? 'hover:border-white' : 'hover:border-black'} flex items-center justify-center gap-2 ${theme.glowEffect}`}
+              <button
+                onClick={() => scrollToSection('contact')}
+                className={`w-full sm:w-36 px-4 py-2 border ${theme.border} font-medium text-sm transition-all duration-200 ${isDarkTheme ? 'hover:border-white' : 'hover:border-black'} flex items-center justify-center gap-2 ${theme.glowEffect}`}
               >
                 Contact Me <ArrowRight size={14} />
               </button>
