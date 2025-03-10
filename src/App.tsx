@@ -346,7 +346,7 @@ function App() {
               <div className="relative">
                 <div className="w-full h-72 md:h-80 rounded-lg overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1513377888081-794d8e958972?q=80&w=1770&auto=format&fit=crop" 
+                    src="https://i.ibb.co/9X8Y78Z/6be9afce84d4.jpg" 
                     alt="About Me" 
                     className={`w-full h-full object-cover ${theme.imgFilter}`}
                   />
