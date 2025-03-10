@@ -58,13 +58,13 @@ function App() {
     {
       name: 'Java',
       url: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg',
-      subtopics: ['Spring', 'Hibernate', 'Maven', 'JUnit'],
+      subtopics: ['Spring', 'OOPS', 'Maven', 'JUnit'],
       details: 'Strong Java fundamentals for enterprise applications.'
     },
     {
       name: 'C++',
       url: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg',
-      subtopics: ['STL', 'OOP', 'Templates', 'Memory'],
+      subtopics: ['DSA', 'OOP', 'Templates', 'Memory'],
       details: 'Proficient in C++ with focus on performance.'
     },
     {
@@ -76,7 +76,7 @@ function App() {
     {
       name: 'SQL',
       url: 'https://www.svgrepo.com/show/331760/sql-database-generic.svg',
-      subtopics: ['MySQL', 'PostgreSQL', 'Indexing', 'Optimization'],
+      subtopics: ['MySQL', 'Joints', 'Indexing', 'Optimization'],
       details: 'Deep knowledge of database design and optimization.'
     }
   ];
