@@ -599,39 +599,50 @@ function App() {
                 ))}
               </div>
 
-              {/* MacBook Air Style Laptop Design */}
+              {/* MacBook Air Style Laptop Design with Wider Base */}
               <div className="relative max-w-2xl mx-auto">
-                <div className={`${theme.cardBg} rounded-t-xl pt-4 px-4 ${theme.border} border-b-0 shadow-xl`}>
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex gap-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
-                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
-                      <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                {/* Container to make screen narrower than the base */}
+                <div className="w-11/12 mx-auto">
+                  {/* Screen with top bezel */}
+                  <div className={`${theme.cardBg} rounded-t-xl ${theme.border} border-b-0 shadow-xl overflow-hidden`}>
+                    {/* Top bezel area */}
+                    <div className="pt-3 px-4 pb-2">
+                      <div className="flex items-center justify-between">
+                        <div className="flex gap-1.5">
+                          <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                          <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                          <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                        </div>
+                        <div className={`text-xs ${theme.textMuted} bg-opacity-80 px-3 py-1 rounded-full ${isDarkTheme ? 'bg-zinc-700' : 'bg-gray-100'}`}>
+                          {projectDemos[activeDemo].link}
+                        </div>
+                        <div className="w-8"></div>
+                      </div>
                     </div>
-                    <div className={`text-xs ${theme.textMuted} bg-opacity-80 px-3 py-1 rounded-full ${isDarkTheme ? 'bg-zinc-700' : 'bg-gray-100'}`}>
-                      {projectDemos[activeDemo].link}
+                    
+                    {/* Video content */}
+                    <div className="aspect-w-16 aspect-h-9 relative group">
+                      <video
+                        className="w-full h-full object-cover"
+                        src={projectDemos[activeDemo].video}
+                        muted
+                        loop
+                        autoPlay
+                        onMouseEnter={(e) => e.target.play()}
+                        onMouseLeave={(e) => e.target.pause()}
+                      />
                     </div>
-                    <div className="w-8"></div>
-                  </div>
-                  <div className="aspect-w-16 aspect-h-9 rounded overflow-hidden relative group mb-1">
-                    <video
-                      className="w-full h-full object-cover"
-                      src={projectDemos[activeDemo].video}
-                      muted
-                      loop
-                      autoPlay
-                      onMouseEnter={(e) => e.target.play()}
-                      onMouseLeave={(e) => e.target.pause()}
-                    />
                   </div>
                 </div>
-                {/* Slim MacBook Air Body */}
-                <div className={`${isDarkTheme ? 'bg-gradient-to-b from-zinc-800 to-zinc-900' : 'bg-gradient-to-b from-gray-300 to-gray-400'} h-5 rounded-b-xl relative border-t ${theme.border}`}>
+                
+                {/* Wider MacBook Air Body */}
+                <div className={`${isDarkTheme ? 'bg-gradient-to-b from-zinc-800 to-zinc-900' : 'bg-gradient-to-b from-gray-300 to-gray-400'} h-6 rounded-b-xl relative border-t ${theme.border}`}>
                   {/* Subtle middle line to mimic the MacBook Air's slim profile */}
                   <div className={`${isDarkTheme ? 'bg-zinc-700' : 'bg-gray-200'} absolute inset-x-0 top-1/2 h-px`}></div>
                 </div>
-                {/* Minimalist Stand */}
-                <div className="h-1 w-16 mx-auto bg-gradient-to-r from-transparent via-gray-500 to-transparent rounded-full mt-0.5"></div>
+                
+                {/* Minimalist Stand - slightly wider */}
+                <div className="h-1 w-20 mx-auto bg-gradient-to-r from-transparent via-gray-500 to-transparent rounded-full mt-0.5"></div>
               </div>
             </div>
           </div>
