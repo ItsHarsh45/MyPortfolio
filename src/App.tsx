@@ -81,7 +81,7 @@ function App() {
     {
       name: 'SQL & NoSQL',
       url: 'https://www.svgrepo.com/show/484232/database.svg',
-      subtopics: ['PostgreSQL', 'MongoDB', 'Indexing', 'Optimization'],
+      subtopics: ['MySQL', 'MongoDB', 'Indexing', 'Optimization'],
       details: 'Deep knowledge of database design and optimization.'
     },
     {
