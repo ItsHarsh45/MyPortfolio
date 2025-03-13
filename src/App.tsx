@@ -138,7 +138,15 @@ function App() {
       {/* Navigation */}
       <nav className={`h-16 fixed top-0 left-0 right-0 w-full ${theme.bg}/90 backdrop-blur-sm z-50 border-b ${theme.border}`}>
         <div className="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
-          <div className="text-xl font-bold tracking-tighter">
+          <div 
+            className="text-xl font-bold tracking-tighter cursor-pointer transition-transform duration-300 hover:scale-105"
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
+            }}
+          >
             CallmeHarsh<span className={isDarkTheme ? 'text-gray-500' : 'text-gray-400'}>.</span>
           </div>
           
