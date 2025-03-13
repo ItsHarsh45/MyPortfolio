@@ -136,7 +136,7 @@ function App() {
   return (
     <div className={`min-h-screen ${theme.bg} ${theme.text} overflow-x-hidden font-sans transition-colors duration-300`}>
       {/* Navigation */}
-      <nav className={`h-16 sticky top-0 ${theme.bg}/90 backdrop-blur-sm z-50 border-b ${theme.border}`}>
+      <nav className={`h-16 fixed top-0 left-0 right-0 w-full ${theme.bg}/90 backdrop-blur-sm z-50 border-b ${theme.border}`}>
         <div className="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
           <div className="text-xl font-bold tracking-tighter">
             CallmeHarsh<span className={isDarkTheme ? 'text-gray-500' : 'text-gray-400'}>.</span>
@@ -190,7 +190,10 @@ function App() {
             {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
               <button
                 key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
+                onClick={() => {
+                  scrollToSection(item.toLowerCase());
+                  setIsMenuOpen(false);
+                }}
                 className={`text-lg py-2 ${isDarkTheme ? 'hover:text-gray-400' : 'hover:text-gray-600'} transition-colors duration-200`}
               >
                 {item}
