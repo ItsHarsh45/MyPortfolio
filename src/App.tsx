@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Typed from 'typed.js';
-import { Menu, X, Github, Linkedin, ExternalLink, Mail, FileText, ArrowRight, Moon, Sun, Instagram } from 'lucide-react';
+import { Menu, X, Github, Linkedin, ExternalLink, Mail, FileText, ArrowRight, Moon, Sun, Instagram, ArrowUp  } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,13 +58,13 @@ function App() {
     {
       name: 'Java',
       url: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg',
-      subtopics: ['Spring', 'OOPS', 'Maven', 'JUnit'],
+      subtopics: ['JDK', 'OOPS', 'JDBC', 'Generics'],
       details: 'Strong Java fundamentals for enterprise applications.'
     },
     {
       name: 'C++',
       url: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg',
-      subtopics: ['DSA', 'OOP', 'Templates', 'Memory'],
+      subtopics: ['Basic Operations', 'OOPS', 'DSA', 'Pointers & References'],
       details: 'Proficient in C++ with focus on performance.'
     },
     {
@@ -74,10 +74,28 @@ function App() {
       details: 'Versatile Python developer for web and data.'
     },
     {
-      name: 'SQL',
-      url: 'https://www.svgrepo.com/show/331760/sql-database-generic.svg',
-      subtopics: ['MySQL', 'Joints', 'Indexing', 'Optimization'],
+      name: 'SQL & NoSQL',
+      url: 'https://www.svgrepo.com/show/484232/database.svg',
+      subtopics: ['PostgreSQL', 'MongoDB', 'Indexing', 'Optimization'],
       details: 'Deep knowledge of database design and optimization.'
+    },
+    {
+      name: 'Web Development',
+      url: 'https://www.svgrepo.com/show/249559/browser-web-development.svg',
+      subtopics: ['HTML/CSS/JS', 'MERN Stack'],
+      details: 'Solid grasp of core web development principles.'
+    },
+    {
+      name: 'Expertise in Prompt Engineering',
+      url: 'https://www.svgrepo.com/show/235200/artificial-intelligence-brain.svg',
+      subtopics: ['Claude', 'Chatgpt'],
+      details: 'Proficient in crafting precise and effective prompts for optimal AI responses.'
+    },
+    {
+      name: 'Agile & Software Development Methodologies',
+      url: 'https://www.svgrepo.com/show/426043/coding.svg',
+      subtopics: ['SDLC', 'Agile', 'Scrum', 'Version Control & Collaboration'],
+      details: 'Proficient in Agile, SDLC, and modern software development methodologies.'
     }
   ];
 
@@ -719,6 +737,17 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Back to Top Button */}
+      <div className="flex justify-center py-6">
+        <button 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className={`w-10 h-10 rounded-full flex items-center justify-center ${isDarkTheme ? 'bg-zinc-800' : 'bg-white'} border ${theme.border} ${theme.textMuted} hover:text-current transition-all duration-200`}
+          aria-label="Back to top"
+        >
+          <ArrowUp size={16} />
+        </button>
+      </div>
 
       {/* Footer */}
       <footer className={`py-6 border-t ${theme.border} ${theme.bg}`}>
