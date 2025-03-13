@@ -474,7 +474,7 @@ function App() {
           }
           
           .skill-card:hover {
-            z-index: 50;
+            z-index: 10; /* Reduced from 50 to ensure it stays below navbar */
             transition-delay: 0s;
           }
           
@@ -487,7 +487,7 @@ function App() {
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 50;
+            z-index: 10; /* Reduced from 50 */
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
@@ -498,11 +498,10 @@ function App() {
           .tooltip-content > div {
             width: 90%;
             max-width: 300px;
-            /* Removed hardcoded background-color: #121212; - now using theme.cardBg from the className */
             border-width: 1px;
             opacity: 0.98;
             position: relative;
-            z-index: 51;
+            z-index: 10; /* Reduced from 51 */
           }
           
           /* Show tooltip on hover */
