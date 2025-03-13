@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Typed from 'typed.js';
-import { Menu, X, Github, Linkedin, ExternalLink, Mail, FileText, ArrowRight, Moon, Sun, Instagram, ArrowUp  } from 'lucide-react';
+import { Menu, X, Github, Linkedin, ExternalLink, Mail, FileText, ArrowRight, Moon, Sun, Instagram } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -737,17 +737,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Back to Top Button */}
-      <div className="flex justify-center py-6">
-        <button 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className={`w-10 h-10 rounded-full flex items-center justify-center ${isDarkTheme ? 'bg-zinc-800' : 'bg-white'} border ${theme.border} ${theme.textMuted} hover:text-current transition-all duration-200`}
-          aria-label="Back to top"
-        >
-          <ArrowUp size={16} />
-        </button>
-      </div>
 
       {/* Footer */}
       <footer className={`py-6 border-t ${theme.border} ${theme.bg}`}>
