@@ -551,7 +551,7 @@ function App() {
               {
                 title: 'GeekPeak',
                 description: 'Showcase Best Projects by University/College students.',
-                image: 'https://i.ibb.co/Xx9KxyZc/cf783bd0b3ab.jpg',
+                image: 'https://i.ibb.co/HTrHQ1YN/4408c95f129d.jpg',
                 tech: ['React', 'Tailwind', 'Firebase'],
                 link: 'https://geekpeak.netlify.app'
               },
