@@ -30,6 +30,11 @@ function App() {
     };
   }, []);
 
+  // Add useEffect to refresh AOS when theme changes
+  useEffect(() => {
+    AOS.refresh();
+  }, [isDarkTheme]);
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -82,7 +87,7 @@ function App() {
     {
       name: 'Web Development',
       url: 'https://www.svgrepo.com/show/249559/browser-web-development.svg',
-      subtopics: ['HTML/CSS/JS', 'MERN Stack'],
+      subtopics: ['HTML', 'CSS', 'JavaScript', 'MERN Stack'],
       details: 'Solid grasp of core web development principles.'
     },
     {
@@ -211,7 +216,7 @@ function App() {
         </div>
       </nav>
 
-      {/* Hero Section - Moved lower */}
+      {/* Hero Section */}
       <section id="home" className="min-h-[90vh] flex items-center justify-center pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4 w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1 space-y-6" data-aos="fade-right">
@@ -232,23 +237,23 @@ function App() {
             </p>
 
             <div className="flex gap-4">
-                {[
-                  { icon: Github, href: 'https://github.com/ItsHarsh45', label: 'GitHub' },
-                  { icon: Linkedin, href: 'https://www.linkedin.com/in/harshkemali/', label: 'LinkedIn' },
-                  { icon: Instagram, href: 'https://www.instagram.com/driftinalong5?utm_source=qr', label: 'Instagram' }
-                ].map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    aria-label={social.label}
-                    className={`w-8 h-8 border ${theme.border} rounded-full flex items-center justify-center ${theme.textMuted} transition-all duration-200 ${isDarkTheme ? 'hover:border-white hover:text-white' : 'hover:border-black hover:text-black'} ${theme.glowEffect}`}
-                  >
-                    <social.icon size={16} />
-                  </a>
-                ))}
-              </div>
+              {[
+                { icon: Github, href: 'https://github.com/ItsHarsh45', label: 'GitHub' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/harshkemali/', label: 'LinkedIn' },
+                { icon: Instagram, href: 'https://www.instagram.com/driftinalong5?utm_source=qr', label: 'Instagram' }
+              ].map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  aria-label={social.label}
+                  className={`w-8 h-8 border ${theme.border} rounded-full flex items-center justify-center ${theme.textMuted} transition-all duration-200 ${isDarkTheme ? 'hover:border-white hover:text-white' : 'hover:border-black hover:text-black'} ${theme.glowEffect}`}
+                >
+                  <social.icon size={16} />
+                </a>
+              ))}
+            </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <a href="https://drive.google.com/file/d/1OhfzHrzsWdgRSCWHgfISYSax93PeWr6l/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <button className={`w-full sm:w-36 px-4 py-2 ${theme.highlight} font-medium text-sm transition-all duration-200 ${theme.highlightHover} flex items-center justify-center gap-2 ${theme.glowEffect}`}>
                   Download Resume <FileText size={14} />
@@ -265,9 +270,7 @@ function App() {
 
           <div className="order-1 md:order-2 flex justify-center" data-aos="fade-left">
             <div className="relative">
-              {/* Enhanced floating profile with particles */}
               <div className="profile-container w-64 h-64 md:w-80 md:h-80 relative">
-                {/* Particle elements */}
                 <div className="particles-container absolute inset-0 -z-10">
                   {Array.from({ length: 8 }).map((_, i) => (
                     <div 
@@ -286,10 +289,8 @@ function App() {
                   ))}
                 </div>
                 
-                {/* Rotating outer ring */}
                 <div className="absolute inset-0 rotating-ring"></div>
                 
-                {/* Dynamic morphing profile outline */}
                 <div 
                   className="absolute inset-0 shape-morph"
                   style={{
@@ -297,7 +298,6 @@ function App() {
                   }}
                 ></div>
                 
-                {/* Profile image with curve at bottom and no hover effect */}
                 <div className="absolute inset-0 overflow-hidden profile-image" style={{ borderRadius: '60% 40% 50% 50%/60% 30% 40% 40%' }}>
                   <img 
                     src="https://i.ibb.co/5xcLVSxY/6e9f5a901157.png" 
@@ -385,7 +385,7 @@ function App() {
             
             <div data-aos="fade-left">
               <div className={`inline-block px-2 py-1 border ${theme.border} ${theme.textMuted} text-xs mb-3`}>
-              Coding Enthusiast
+                Coding Enthusiast
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Tech Explorer & Code Artist</h2>
               <p className={`${theme.textMuted} text-sm md:text-base mb-6`}>
@@ -430,7 +430,6 @@ function App() {
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                {/* Base card */}
                 <div className={`h-full flex flex-col items-center justify-center p-8 border ${theme.border} ${theme.cardBg} rounded-lg transition-all duration-300`}>
                   <img
                     src={tech.url}
@@ -440,7 +439,6 @@ function App() {
                   <h3 className="text-lg font-semibold">{tech.name}</h3>
                 </div>
                 
-                {/* Tooltip overlay that appears on hover */}
                 <div className="tooltip-content">
                   <div className={`p-5 ${theme.cardBg} border ${theme.border} rounded-lg shadow-xl`}>
                     <h3 className="text-lg font-semibold mb-3">{tech.name}</h3>
@@ -464,7 +462,6 @@ function App() {
           </div>
         </div>
 
-        {/* Styles for the tooltip cards */}
         <style jsx>{`
           .skill-card {
             perspective: 1000px;
@@ -474,7 +471,7 @@ function App() {
           }
           
           .skill-card:hover {
-            z-index: 10; /* Reduced from 50 to ensure it stays below navbar */
+            z-index: 10;
             transition-delay: 0s;
           }
           
@@ -487,7 +484,7 @@ function App() {
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 10; /* Reduced from 50 */
+            z-index: 10;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
@@ -501,10 +498,9 @@ function App() {
             border-width: 1px;
             opacity: 0.98;
             position: relative;
-            z-index: 10; /* Reduced from 51 */
+            z-index: 10;
           }
           
-          /* Show tooltip on hover */
           .skill-card:hover .tooltip-content {
             opacity: 1;
             visibility: visible;
@@ -512,7 +508,6 @@ function App() {
             pointer-events: auto;
           }
           
-          /* Add hover effect to base card */
           .skill-card:hover > div:first-child {
             transform: scale(1.05);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -627,13 +622,9 @@ function App() {
                 ))}
               </div>
 
-              {/* MacBook Air Style Laptop Design with Refined Proportions */}
               <div className="relative max-w-2xl mx-auto">
-                {/* Container to make screen narrower than the base */}
                 <div className="w-11/12 mx-auto">
-                  {/* Screen with reduced top bezel and small side bezels */}
                   <div className={`${theme.cardBg} rounded-t-xl ${theme.border} border-b-0 shadow-xl overflow-hidden`}>
-                    {/* Top bezel area - reduced by 20% */}
                     <div className="pt-2 px-4 pb-1.5">
                       <div className="flex items-center justify-between">
                         <div className="flex gap-1.5">
@@ -648,7 +639,6 @@ function App() {
                       </div>
                     </div>
                     
-                    {/* Video content with small side bezels */}
                     <div className="px-1">
                       <div className="aspect-w-16 aspect-h-9 relative group mb-1">
                         <video
@@ -665,13 +655,10 @@ function App() {
                   </div>
                 </div>
                 
-                {/* MacBook Air Body */}
                 <div className={`${isDarkTheme ? 'bg-gradient-to-b from-zinc-800 to-zinc-900' : 'bg-gradient-to-b from-gray-300 to-gray-400'} h-4.5 rounded-b-xl relative border-t ${theme.border}`} style={{ height: "1.125rem" }}>
-                  {/* Subtle middle line to mimic the MacBook Air's slim profile */}
                   <div className={`${isDarkTheme ? 'bg-zinc-700' : 'bg-gray-200'} absolute inset-x-0 top-1/2 h-px`}></div>
                 </div>
                 
-                {/* Minimalist Stand */}
                 <div className="h-1 w-20 mx-auto bg-gradient-to-r from-transparent via-gray-500 to-transparent rounded-full mt-0.5"></div>
               </div>
             </div>
