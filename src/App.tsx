@@ -254,7 +254,7 @@ function App() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="https://drive.google.com/file/d/1RZXBmDUCpdamoYi6zEcWZ6j_Je2A-EZv/view?usp=sharing" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1ghWODI5Cd5yp60ZZtYjMASZP2Yy20lcN/view?usp=sharing" rel="noopener noreferrer">
                 <button className={`w-full sm:w-36 px-4 py-2 ${theme.highlight} font-medium text-sm transition-all duration-200 ${theme.highlightHover} flex items-center justify-center gap-2 ${theme.glowEffect}`}>
                   Download Resume <FileText size={14} />
                 </button>
