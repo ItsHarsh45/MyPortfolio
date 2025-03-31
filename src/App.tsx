@@ -227,15 +227,15 @@ function App() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
               I'm <span>Chanabasappa</span>
             </h1>
-
+      
             <div className="text-lg md:text-xl font-medium">
               I'm a <span className="typed-element"></span>
             </div>
-
+      
             <p className={`text-sm md:text-base ${theme.textMuted} max-w-md`}>
               Specialized in building exceptional digital experiences that are fast, accessible, and visually appealing.
             </p>
-
+      
             <div className="flex gap-4">
               {[
                 { icon: Github, href: 'https://github.com/ItsHarsh45', label: 'GitHub' },
@@ -252,7 +252,7 @@ function App() {
                 </a>
               ))}
             </div>
-
+      
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="https://drive.google.com/file/d/1ghWODI5Cd5yp60ZZtYjMASZP2Yy20lcN/view?usp=sharing" rel="noopener noreferrer">
                 <button className={`w-full sm:w-36 px-4 py-2 ${theme.highlight} font-medium text-sm transition-all duration-200 ${theme.highlightHover} flex items-center justify-center gap-2 ${theme.glowEffect}`}>
@@ -267,7 +267,7 @@ function App() {
               </button>
             </div>
           </div>
-
+      
           <div className="order-1 md:order-2 flex justify-center" data-aos="fade-left">
             <div className="relative">
               <div className="profile-container w-64 h-64 md:w-80 md:h-80 relative">
@@ -298,11 +298,11 @@ function App() {
                   }}
                 ></div>
                 
-                <div className="absolute inset-0 overflow-hidden profile-image" style={{ borderRadius: '60% 40% 50% 50%/60% 30% 40% 40%' }}>
+                <div className="absolute inset-0 overflow-hidden profile-image-container" style={{ borderRadius: '60% 40% 50% 50%/60% 30% 40% 40%' }}>
                   <img 
                     src="https://i.ibb.co/5xcLVSxY/6e9f5a901157.png" 
                     alt="Profile" 
-                    className={`w-full h-full object-cover ${theme.imgFilter}`}
+                    className="profile-image w-full h-full object-cover"
                   />
                 </div>
               </div>
@@ -359,8 +359,19 @@ function App() {
                 100% { transform: translate(0, 0); }
               }
               
+              .profile-image-container {
+                transition: all 0.5s ease;
+              }
+              
+              /* Apply filter only in dark theme */
               .profile-image {
                 transition: all 0.5s ease;
+                ${isDarkTheme ? 'filter: grayscale(80%) brightness(0.8);' : ''}
+              }
+              
+              /* Reset filter on hover in dark theme */
+              .profile-image-container:hover .profile-image {
+                filter: none;
               }
             `}</style>
           </div>
