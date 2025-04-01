@@ -30,7 +30,6 @@ function App() {
     };
   }, []);
 
-  // Add useEffect to refresh AOS when theme changes
   useEffect(() => {
     AOS.refresh();
   }, [isDarkTheme]);
@@ -217,7 +216,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-[90vh] flex items-center justify-center pt-32 pb-16">
+      <section id="home" className="min-h-[90vh] flex items-center justify-center pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1 space-y-6" data-aos="fade-right">
             <div className={`inline-block px-2 py-1 border ${theme.border} ${theme.textMuted} text-xs`}>
@@ -363,13 +362,11 @@ function App() {
                 transition: all 0.5s ease;
               }
               
-              /* Apply filter only in dark theme */
               .profile-image {
                 transition: all 0.5s ease;
                 ${isDarkTheme ? 'filter: grayscale(80%) brightness(0.8);' : ''}
               }
               
-              /* Reset filter on hover in dark theme */
               .profile-image-container:hover .profile-image {
                 filter: none;
               }
@@ -658,8 +655,6 @@ function App() {
                           muted
                           loop
                           autoPlay
-                          onMouseEnter={(e) => e.target.play()}
-                          onMouseLeave={(e) => e.target.pause()}
                         />
                       </div>
                     </div>
