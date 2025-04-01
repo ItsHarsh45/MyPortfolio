@@ -216,7 +216,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-[90vh] flex items-center justify-center pt-32 pb-24">
+      <section id="home" className="min-h-[90vh] flex items-center justify-center pt-28 pb-16">
         <div className="max-w-7xl mx-auto px-4 w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1 space-y-6" data-aos="fade-right">
             <div className={`inline-block px-2 py-1 border ${theme.border} ${theme.textMuted} text-xs`}>
