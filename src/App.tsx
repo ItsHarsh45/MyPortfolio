@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     AOS.init({ 
       offset: 100,
-      duration: 960,
+      duration: 800,
       easing: 'ease-in-out',
       once: true 
     });
