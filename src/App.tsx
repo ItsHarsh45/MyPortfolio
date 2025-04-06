@@ -50,7 +50,7 @@ function App() {
     {
       name: 'React',
       url: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg',
-      subtopics: ['Hooks', 'Tailwind CSS', 'Context/Redux', 'Next.js'],
+      subtopics: ['Hooks', 'Tailwind CSS', 'Context/Redux', 'React Native'],
       details: 'Proficient in building complex user interfaces with React.'
     },
     {
