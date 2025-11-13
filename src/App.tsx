@@ -69,7 +69,7 @@ const projectDemos = [
   },
   {
     title: 'GeekPeak',
-    video: 'https://www.svgator.com/blog/404-page-error-animation-examples/?hl=en-US'
+    video: 'https://www.svgator.com/blog/404-page-error-animation-examples/?hl=en-US',
     link: 'https://geekpeak.netlify.app'
   },
   {
