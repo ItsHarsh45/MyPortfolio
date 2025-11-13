@@ -64,17 +64,17 @@ const techLogos = [
 const projectDemos = [
   {
     title: 'MyHarmony',
-    video: 'https://media-hosting.imagekit.io//c14dc76f71234f11/Myharmony.mp4?Expires=1836115950&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=U8rbLCFrFN59WXx2U~1sJoVN3s1qV1MCJ002PrS-BDGW9XxPJN0k~m-NabdGIYj-lVXmZGTBex1SN7EceDYaQFRqXQxXIiOqJzNyR-ZCXQSN4X~Mhe4uIeAzImztdmNuRU6nzI8NN-P7wWThW9O03iSKUXjOiCObPlmvhRgNVio9Uq8e-lqEPnz8wWkyVlDsQjdQkQhDH1ygBFnmIK-FnR7HUPGnfSrSeNfGTd758sJNGj1IZoaNvO4GAYdMeHGtgt-6hWfKCvQyXUV3E~OsRAjGKeWPUgwSZ7uSzWVPFdRsKrVsqQAM-sFb7H~Kw7ZdsTJB1QZ6WuJu2dX0Pd2K6w__',
+    video: 'https://www.svgator.com/blog/404-page-error-animation-examples/?hl=en-US',
     link: 'https://myharmony.netlify.app'
   },
   {
     title: 'GeekPeak',
-    video: 'https://media-hosting.imagekit.io//60c2dd7b18da4f7b/Geekpeak.mp4?Expires=1836115950&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=xFSITDj18HCz-3UkGpznwAcBQtEbFANoHJCxzg~b3af1Tb6ierR7ox9VBsdlg15o0qFS-sjIwPm8T7PMjBaXEITgno71wO0wb-ErBbN1fX5MqfeSVhLlBh3e9pi7TNTviqOSKnNHONCfPC3c051RX6stG-JNq4yUnLfaFC~xnBrCMOXEX92C5oYhg-dGxDIjxlGzTirRYPGov0Aqa0r9UtDgU~0ItyHDx-muzL4o0XDpbnGp539MNw1ME2OWnnbxCu2zQYCPi-5Z8D~ie8que~l4L9CVLZ8az3WOypuikA58jDlQLUR1DJVHOjAxYjquEc-E5yAhHtvdjsFH4pxNCA__',
+    video: 'https://www.svgator.com/blog/404-page-error-animation-examples/?hl=en-US'
     link: 'https://geekpeak.netlify.app'
   },
   {
     title: 'Online Gamestore',
-    video: 'https://media-hosting.imagekit.io//4b2982d4c39e405e/Gamestore.mp4?Expires=1836115832&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=fsKPdjlO5jcYg8XDBTBkWWVFdrXtdXNCgZkIj55hUZxzTrgyliFxlFIV2hPWOKTRRwPcA2NwGfazHMb~JYTMlARl18pkzmTtN27fICTpUTh-T37fefDH45I0Qiod5YFdJGG5QfIPkgw1u6doZwRPV6AYi9JHUv1F1yBpEBlpTcORak5UpawxLdre6UhOLNK33QOlgD86~CVyURhNJHLxvF3EzcwUGIRO29doRNCNhS-xVGaJaC93LIRQJJRIemwflOMZcF3iESs5eCzWfaKMKH0PGuSGO3SZFbfC2buZTnQI3ml5tzuS9kgcDIUX7AK3TNjj4A3PnksFZRwUVEnpZw__',
+    video: 'https://www.svgator.com/blog/404-page-error-animation-examples/?hl=en-US',
     link: 'https://localhost'
   }
 ];
