@@ -64,17 +64,17 @@ const techLogos = [
 const projectDemos = [
   {
     title: 'MyHarmony',
-    video: 'https://www.svgator.com/blog/404-page-error-animation-examples/?hl=en-US',
+    video: 'https://cdn.dribbble.com/userupload/20420676/file/original-aac8f7f838812fa53cd92617fad5f892.gif',
     link: 'https://myharmony.netlify.app'
   },
   {
     title: 'GeekPeak',
-    video: 'https://www.svgator.com/blog/404-page-error-animation-examples/?hl=en-US',
+    video: 'https://cdn.dribbble.com/userupload/20420676/file/original-aac8f7f838812fa53cd92617fad5f892.gif',
     link: 'https://geekpeak.netlify.app'
   },
   {
     title: 'Online Gamestore',
-    video: 'https://www.svgator.com/blog/404-page-error-animation-examples/?hl=en-US',
+    video: 'https://cdn.dribbble.com/userupload/20420676/file/original-aac8f7f838812fa53cd92617fad5f892.gif',
     link: 'https://localhost'
   }
 ];
