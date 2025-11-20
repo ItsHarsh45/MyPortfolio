@@ -1,83 +1,8 @@
-import React, { useEffect, useState, useMemo, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Typed from 'typed.js';
 import { Menu, X, Github, Linkedin, ExternalLink, Mail, FileText, ArrowRight, Moon, Sun, Instagram } from 'lucide-react';
-
-const techLogos = [
-  {
-    name: 'React',
-    url: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg',
-    subtopics: ['Hooks', 'Tailwind CSS', 'Context/Redux', 'React Native'],
-    details: 'Proficient in building complex user interfaces with React.'
-  },
-  {
-    name: 'Firebase',
-    url: 'https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg',
-    subtopics: ['Auth', 'Firestore', 'Storage', 'Hosting'],
-    details: 'Extensive experience with Firebase platform.'
-  },
-  {
-    name: 'Java',
-    url: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg',
-    subtopics: ['JDK', 'OOPS', 'JDBC', 'Generics'],
-    details: 'Strong Java fundamentals for enterprise applications.'
-  },
-  {
-    name: 'C++',
-    url: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg',
-    subtopics: ['Basic Operations', 'OOPS', 'DSA', 'Pointers & References'],
-    details: 'Proficient in C++ with focus on performance.'
-  },
-  {
-    name: 'Python',
-    url: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg',
-    subtopics: ['Django', 'Flask', 'NumPy', 'Pandas'],
-    details: 'Versatile Python developer for web and data.'
-  },
-  {
-    name: 'SQL & NoSQL',
-    url: 'https://www.svgrepo.com/show/484232/database.svg',
-    subtopics: ['MySQL', 'MongoDB', 'Indexing', 'Optimization'],
-    details: 'Deep knowledge of database design and optimization.'
-  },
-  {
-    name: 'Web Development',
-    url: 'https://www.svgrepo.com/show/249559/browser-web-development.svg',
-    subtopics: ['HTML', 'CSS', 'JavaScript', 'MERN Stack'],
-    details: 'Solid grasp of core web development principles.'
-  },
-  {
-    name: 'Expertise in Prompt Engineering',
-    url: 'https://www.svgrepo.com/show/235200/artificial-intelligence-brain.svg',
-    subtopics: ['Claude', 'Chatgpt'],
-    details: 'Proficient in crafting precise and effective prompts for optimal AI responses.'
-  },
-  {
-    name: 'Agile & Software Development Methodologies',
-    url: 'https://www.svgrepo.com/show/426043/coding.svg',
-    subtopics: ['SDLC', 'Agile', 'Scrum', 'Version Control & Collaboration'],
-    details: 'Proficient in Agile, SDLC, and modern software development methodologies.'
-  }
-];
-
-const projectDemos = [
-  {
-    title: 'MyHarmony',
-    video: '/404.gif',
-    link: 'https://myharmony.netlify.app'
-  },
-  {
-    title: 'GeekPeak',
-    video: '/404.gif',
-    link: 'https://geekpeak.netlify.app'
-  },
-  {
-    title: 'Online Gamestore',
-    video: '/404.gif',
-    link: 'https://localhost'
-  }
-];
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -109,19 +34,94 @@ function App() {
     AOS.refresh();
   }, [isDarkTheme]);
 
-  const scrollToSection = useCallback((id) => {
+  const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false);
-  }, []); 
+  };
 
-  const toggleTheme = useCallback(() => {
-    setIsDarkTheme(prevTheme => !prevTheme);
-  }, []); 
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
 
-  const theme = useMemo(() => ({
+  const techLogos = [
+    {
+      name: 'React',
+      url: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg',
+      subtopics: ['Hooks', 'Tailwind CSS', 'Context/Redux', 'React Native'],
+      details: 'Proficient in building complex user interfaces with React.'
+    },
+    {
+      name: 'Firebase',
+      url: 'https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg',
+      subtopics: ['Auth', 'Firestore', 'Storage', 'Hosting'],
+      details: 'Extensive experience with Firebase platform.'
+    },
+    {
+      name: 'Java',
+      url: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg',
+      subtopics: ['JDK', 'OOPS', 'JDBC', 'Generics'],
+      details: 'Strong Java fundamentals for enterprise applications.'
+    },
+    {
+      name: 'C++',
+      url: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg',
+      subtopics: ['Basic Operations', 'OOPS', 'DSA', 'Pointers & References'],
+      details: 'Proficient in C++ with focus on performance.'
+    },
+    {
+      name: 'Python',
+      url: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg',
+      subtopics: ['Django', 'Flask', 'NumPy', 'Pandas'],
+      details: 'Versatile Python developer for web and data.'
+    },
+    {
+      name: 'SQL & NoSQL',
+      url: 'https://www.svgrepo.com/show/484232/database.svg',
+      subtopics: ['MySQL', 'MongoDB', 'Indexing', 'Optimization'],
+      details: 'Deep knowledge of database design and optimization.'
+    },
+    {
+      name: 'Web Development',
+      url: 'https://www.svgrepo.com/show/249559/browser-web-development.svg',
+      subtopics: ['HTML', 'CSS', 'JavaScript', 'MERN Stack'],
+      details: 'Solid grasp of core web development principles.'
+    },
+    {
+      name: 'Expertise in Prompt Engineering',
+      url: 'https://www.svgrepo.com/show/235200/artificial-intelligence-brain.svg',
+      subtopics: ['Claude', 'Chatgpt'],
+      details: 'Proficient in crafting precise and effective prompts for optimal AI responses.'
+    },
+    {
+      name: 'Agile & Software Development Methodologies',
+      url: 'https://www.svgrepo.com/show/426043/coding.svg',
+      subtopics: ['SDLC', 'Agile', 'Scrum', 'Version Control & Collaboration'],
+      details: 'Proficient in Agile, SDLC, and modern software development methodologies.'
+    }
+  ];
+
+  const projectDemos = [
+    {
+      title: 'MyHarmony',
+      image: 'https://cdn.svgator.com/images/2024/04/car-underwater-404-error-page-animation.gif',
+      link: 'https://myharmony.netlify.app'
+    },
+    {
+      title: 'GeekPeak',
+      image: 'https://cdn.svgator.com/images/2024/04/car-underwater-404-error-page-animation.gif',
+      link: 'https://geekpeak.netlify.app'
+    },
+    {
+      title: 'Online Gamestore',
+      image: 'https://cdn.svgator.com/images/2024/04/car-underwater-404-error-page-animation.gif',
+      link: 'https://localhost'
+    }
+  ];
+
+  const theme = {
     bg: isDarkTheme ? 'bg-black' : 'bg-white',
     text: isDarkTheme ? 'text-white' : 'text-black',
     textMuted: isDarkTheme ? 'text-gray-400' : 'text-gray-600',
@@ -135,7 +135,7 @@ function App() {
     iconBg: isDarkTheme ? 'bg-gray-800' : 'bg-gray-100',
     glowEffect: isDarkTheme ? 'hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]' : 'hover:shadow-[0_0_15px_rgba(0,0,0,0.3)]',
     profileOutline: isDarkTheme ? 'shadow-[0_0_15px_rgba(255,255,255,0.5)]' : 'shadow-[0_0_15px_rgba(0,0,0,0.5)]'
-  }), [isDarkTheme]);
+  };
 
   return (
     <div className={`min-h-screen ${theme.bg} ${theme.text} overflow-x-hidden font-sans transition-colors duration-300`}>
@@ -153,7 +153,7 @@ function App() {
           >
             CallmeHarsh<span className={isDarkTheme ? 'text-gray-500' : 'text-gray-400'}>.</span>
           </div>
-
+          
           <div className="hidden md:flex gap-6 items-center">
             {['About', 'Skills', 'Projects'].map((item) => (
               <button 
@@ -170,7 +170,7 @@ function App() {
             >
               Contact Me
             </button>
-
+            
             <button 
               onClick={toggleTheme} 
               className={`w-8 h-8 rounded-full flex items-center justify-center ${theme.border} border`}
@@ -222,19 +222,19 @@ function App() {
             <div className={`inline-block px-2 py-1 border ${theme.border} ${theme.textMuted} text-xs`}>
               Full-Stack Developer
             </div>
-
+            
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
               I'm <span>Chanabasappa</span>
             </h1>
-
+      
             <div className="text-lg md:text-xl font-medium">
               I'm a <span className="typed-element"></span>
             </div>
-
+      
             <p className={`text-sm md:text-base ${theme.textMuted} max-w-md`}>
               Specialized in building exceptional digital experiences that are fast, accessible, and visually appealing.
             </p>
-
+      
             <div className="flex gap-4">
               {[
                 { icon: Github, href: 'https://github.com/ItsHarsh45', label: 'GitHub' },
@@ -251,7 +251,7 @@ function App() {
                 </a>
               ))}
             </div>
-
+      
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="https://drive.google.com/file/d/1ghWODI5Cd5yp60ZZtYjMASZP2Yy20lcN/view?usp=sharing" rel="noopener noreferrer">
                 <button className={`w-full sm:w-36 px-4 py-2 ${theme.highlight} font-medium text-sm transition-all duration-200 ${theme.highlightHover} flex items-center justify-center gap-2 ${theme.glowEffect}`}>
@@ -266,7 +266,7 @@ function App() {
               </button>
             </div>
           </div>
-
+      
           <div className="order-1 md:order-2 flex justify-center" data-aos="fade-left">
             <div className="relative">
               <div className="profile-container w-64 h-64 md:w-80 md:h-80 relative">
@@ -287,35 +287,27 @@ function App() {
                     ></div>
                   ))}
                 </div>
-
-                <div 
-                  className="absolute inset-0 rotating-ring"
-                  style={{
-                    borderColor: isDarkTheme ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.1)'
-                  }}
-                ></div>
-
+                
+                <div className="absolute inset-0 rotating-ring"></div>
+                
                 <div 
                   className="absolute inset-0 shape-morph"
                   style={{
                     borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%',
-                    boxShadow: `0 0 20px 5px ${isDarkTheme ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.3)'}`,
-                    background: `${isDarkTheme ? 'linear-gradient(90deg, rgba(70,70,255,0.5), rgba(70,255,70,0.5))' : 'linear-gradient(90deg, rgba(0,0,255,0.2), rgba(0,255,0,0.2))'}`
                   }}
                 ></div>
-
+                
                 <div className="absolute inset-0 overflow-hidden profile-image-container" style={{ borderRadius: '60% 40% 50% 50%/60% 30% 40% 40%' }}>
                   <img 
                     src="https://i.ibb.co/5xcLVSxY/6e9f5a901157.png" 
                     alt="Profile" 
                     className="profile-image w-full h-full object-cover"
-                    style={isDarkTheme ? { filter: 'grayscale(80%) brightness(0.8)' } : {}}
                   />
                 </div>
               </div>
             </div>
-
-            <style>{`
+            
+            <style jsx="true">{`
               .profile-container {
                 animation: float 6s ease-in-out infinite;
                 transform-style: preserve-3d;
@@ -327,8 +319,7 @@ function App() {
               }
               
               .rotating-ring {
-                border-style: dashed;
-                border-width: 2px;
+                border: 2px dashed ${isDarkTheme ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.1)'};
                 border-radius: 50%;
                 transform: scale(1.1);
                 animation: rotate 20s linear infinite;
@@ -340,7 +331,9 @@ function App() {
               }
               
               .shape-morph {
+                box-shadow: 0 0 20px 5px ${isDarkTheme ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.3)'};
                 animation: morph 8s ease-in-out infinite;
+                background: ${isDarkTheme ? 'linear-gradient(90deg, rgba(70,70,255,0.5), rgba(70,255,70,0.5))' : 'linear-gradient(90deg, rgba(0,0,255,0.2), rgba(0,255,0,0.2))'};
                 transition: all 1s ease-in-out;
               }
               
@@ -371,6 +364,7 @@ function App() {
               
               .profile-image {
                 transition: all 0.5s ease;
+                ${isDarkTheme ? 'filter: grayscale(80%) brightness(0.8);' : ''}
               }
               
               .profile-image-container:hover .profile-image {
@@ -396,7 +390,7 @@ function App() {
                 </div>
               </div>
             </div>
-
+            
             <div data-aos="fade-left">
               <div className={`inline-block px-2 py-1 border ${theme.border} ${theme.textMuted} text-xs mb-3`}>
                 Coding Enthusiast
@@ -435,7 +429,7 @@ function App() {
               Comprehensive expertise across modern technologies
             </p>
           </div>
-
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {techLogos.map((tech, index) => (
               <div
@@ -452,12 +446,12 @@ function App() {
                   />
                   <h3 className="text-lg font-semibold">{tech.name}</h3>
                 </div>
-
+                
                 <div className="tooltip-content">
                   <div className={`p-5 ${theme.cardBg} border ${theme.border} rounded-lg shadow-xl`}>
                     <h3 className="text-lg font-semibold mb-3">{tech.name}</h3>
                     <p className={`text-sm mb-4 leading-relaxed`}>{tech.details}</p>
-
+                    
                     <div className="py-3">
                       <h4 className="text-xs uppercase tracking-wider mb-3 font-semibold">Related Skills</h4>
                       <ul className="grid grid-cols-2 gap-2">
@@ -476,7 +470,7 @@ function App() {
           </div>
         </div>
 
-        <style>{`
+        <style jsx>{`
           .skill-card {
             perspective: 1000px;
             position: relative;
@@ -547,7 +541,7 @@ function App() {
               A collection of my work showcasing technical execution
             </p>
           </div>
-
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
               { 
@@ -607,7 +601,7 @@ function App() {
               </div>
             ))}
           </div>
-
+          
           <div className="mt-16" data-aos="fade-up">
             <div className="text-center max-w-lg mx-auto mb-10">
               <div className={`inline-block px-2 py-1 border ${theme.border} ${theme.textMuted} text-xs mb-3 rounded-md`}>
@@ -618,7 +612,7 @@ function App() {
                 Interactive showcase of selected projects
               </p>
             </div>
-
+            
             <div className="max-w-3xl mx-auto">
               <div className="flex justify-center gap-3 mb-6 flex-wrap">
                 {projectDemos.map((demo, index) => (
@@ -652,26 +646,24 @@ function App() {
                         <div className="w-8"></div>
                       </div>
                     </div>
-
+                    
                     <div className="px-1">
                       <div className="aspect-w-16 aspect-h-9 relative group mb-1">
-                        <video
+                        {/* UPDATED: Changed to IMG tag because the source is now an image, not a video */}
+                        <img
                           className="w-full h-full object-cover rounded"
-                          src={projectDemos[activeDemo].video}
-                          muted
-                          loop
-                          autoPlay
-                          playsInline
+                          src={projectDemos[activeDemo].image}
+                          alt="Project Demo"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
-
+                
                 <div className={`${isDarkTheme ? 'bg-gradient-to-b from-zinc-800 to-zinc-900' : 'bg-gradient-to-b from-gray-300 to-gray-400'} h-4.5 rounded-b-xl relative border-t ${theme.border}`} style={{ height: "1.125rem" }}>
                   <div className={`${isDarkTheme ? 'bg-zinc-700' : 'bg-gray-200'} absolute inset-x-0 top-1/2 h-px`}></div>
                 </div>
-
+                
                 <div className="h-1 w-20 mx-auto bg-gradient-to-r from-transparent via-gray-500 to-transparent rounded-full mt-0.5"></div>
               </div>
             </div>
@@ -691,7 +683,7 @@ function App() {
               <p className={`${theme.textMuted} text-sm md:text-base mb-6`}>
                 Interested in ambitious projects and innovative ideas. Feel free to reach out!
               </p>
-
+              
               <div className="space-y-4 mb-6">
                 {[
                   { label: 'Location', value: 'Bangalore, India', icon: ExternalLink },
@@ -709,7 +701,7 @@ function App() {
                 ))}
               </div>
             </div>
-
+            
             <div data-aos="fade-left" className="flex flex-col justify-center">
               <div className={`p-8 border ${theme.border} ${isDarkTheme ? 'bg-zinc-800' : 'bg-white'}`}>
                 <h3 className="text-xl font-medium mb-4">Ready to start your project?</h3>
@@ -724,7 +716,7 @@ function App() {
                     <Mail size={16} />
                     Send Email
                   </a>
-
+                  
                   <div className="flex items-center gap-4 ml-2">
                     {[
                       { icon: Github, href: 'https://github.com/ItsHarsh45', label: 'GitHub' },
