@@ -239,7 +239,7 @@ function App() {
               {[
                 { icon: Github, href: 'https://github.com/ItsHarsh45', label: 'GitHub' },
                 { icon: Linkedin, href: 'https://www.linkedin.com/in/harshkemali/', label: 'LinkedIn' },
-                { icon: Instagram, href: 'https://www.instagram.com/driftinalong5?utm_source=qr', label: 'Instagram' }
+                { icon: Instagram, href: 'https://www.instagram.com/gonnabe_harsh/', label: 'Instagram' }
               ].map((social) => (
                 <a
                   key={social.label}
@@ -299,7 +299,7 @@ function App() {
                 
                 <div className="absolute inset-0 overflow-hidden profile-image-container" style={{ borderRadius: '60% 40% 50% 50%/60% 30% 40% 40%' }}>
                   <img 
-                    src="https://i.postimg.cc/T33gypM5/Whats-App-Image-2026-04-28-at-1-07-17-PM.jpg" 
+                    src="https://i.postimg.cc/Dygwb67k/Whats-App-Image-2026-04-28-at-12-59-45-PM.jpg" 
                     alt="Profile" 
                     className="profile-image w-full h-full object-cover"
                   />
@@ -561,7 +561,7 @@ function App() {
               {
                 title: 'Online Game Store',
                 description: 'Data Encryption and Decryption Services over Online Game Store.',
-                image: 'https://i.ibb.co/H4rBhMV/103c142cfe45.jpg',
+                image: 'https://i.postimg.cc/GmjRfmH7/Whats-App-Image-2026-04-28-at-1-12-09-PM.jpg',
                 tech: ['HTML', 'CSS', 'JS', 'MySQL', 'PHP'],
                 link: 'https://github.com/ItsHarsh45/updated-gamestore'
               }
@@ -721,7 +721,7 @@ function App() {
                     {[
                       { icon: Github, href: 'https://github.com/ItsHarsh45', label: 'GitHub' },
                       { icon: Linkedin, href: 'https://www.linkedin.com/in/harshkemali/', label: 'LinkedIn' },
-                      { icon: Instagram, href: 'https://www.instagram.com/driftinalong5?utm_source=qr', label: 'Instagram' }
+                      { icon: Instagram, href: 'https://www.instagram.com/gonnabe_harsh/', label: 'Instagram' }
                     ].map((social) => (
                       <a
                         key={social.label}
