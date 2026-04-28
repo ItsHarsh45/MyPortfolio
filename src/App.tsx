@@ -299,7 +299,7 @@ function App() {
                 
                 <div className="absolute inset-0 overflow-hidden profile-image-container" style={{ borderRadius: '60% 40% 50% 50%/60% 30% 40% 40%' }}>
                   <img 
-                    src="https://i.ibb.co/5xcLVSxY/6e9f5a901157.png" 
+                    src="https://i.postimg.cc/T33gypM5/Whats-App-Image-2026-04-28-at-1-07-17-PM.jpg" 
                     alt="Profile" 
                     className="profile-image w-full h-full object-cover"
                   />
@@ -383,7 +383,7 @@ function App() {
               <div className="relative">
                 <div className="w-full h-72 md:h-80 rounded-lg overflow-hidden">
                   <img 
-                    src="https://i.ibb.co/9X8Y78Z/6be9afce84d4.jpg" 
+                    src="https://i.postimg.cc/QCvkgDQL/Whats-App-Image-2026-04-28-at-1-04-41-PM.jpg" 
                     alt="About Me" 
                     className={`w-full h-full object-cover ${theme.imgFilter}`}
                   />
