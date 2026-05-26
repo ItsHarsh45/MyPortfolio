@@ -299,7 +299,7 @@ function App() {
                 
                 <div className="absolute inset-0 overflow-hidden profile-image-container" style={{ borderRadius: '60% 40% 50% 50%/60% 30% 40% 40%' }}>
                   <img 
-                    src="https://i.postimg.cc/Dygwb67k/Whats-App-Image-2026-04-28-at-12-59-45-PM.jpg" 
+                    src="https://i.postimg.cc/GhFRKrQZ/1779554022159.png" 
                     alt="Profile" 
                     className="profile-image w-full h-full object-cover"
                   />
