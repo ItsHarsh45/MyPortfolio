@@ -300,8 +300,8 @@ function App() {
                   }}
                 ></div>
                 
-                {/* Profile image — NO border-radius clip, shows full original shape */}
-                <div className="absolute inset-0 flex items-center justify-center">
+                {/* Profile image — flat top, rounded bottom */}
+                <div className="absolute inset-0 flex items-center justify-center profile-image-container">
                   <img 
                     src="https://i.postimg.cc/GhFRKrQZ/1779554022159.png" 
                     alt="Profile" 
@@ -362,12 +362,17 @@ function App() {
                 100% { transform: translate(0, 0); }
               }
               
+              .profile-image-container {
+                border-radius: 0 0 50% 50% / 0 0 40% 40%;
+                overflow: hidden;
+              }
+
               .profile-image {
                 transition: all 0.5s ease;
                 ${isDarkTheme ? 'filter: grayscale(80%) brightness(0.8);' : ''}
               }
               
-              .profile-image:hover {
+              .profile-image-container:hover .profile-image {
                 filter: none;
               }
             `}</style>
