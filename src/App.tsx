@@ -270,6 +270,7 @@ function App() {
           <div className="order-1 md:order-2 flex justify-center" data-aos="fade-left">
             <div className="relative">
               <div className="profile-container w-64 h-64 md:w-80 md:h-80 relative">
+                {/* Particles */}
                 <div className="particles-container absolute inset-0 -z-10">
                   {Array.from({ length: 8 }).map((_, i) => (
                     <div 
@@ -288,20 +289,23 @@ function App() {
                   ))}
                 </div>
                 
+                {/* Rotating ring */}
                 <div className="absolute inset-0 rotating-ring"></div>
                 
+                {/* Morphing glow behind image — no clipping */}
                 <div 
-                  className="absolute inset-0 shape-morph"
+                  className="absolute inset-0 shape-morph -z-10"
                   style={{
                     borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%',
                   }}
                 ></div>
                 
-                <div className="absolute inset-0 overflow-hidden profile-image-container" style={{ borderRadius: '60% 40% 50% 50%/60% 30% 40% 40%' }}>
+                {/* Profile image — NO border-radius clip, shows full original shape */}
+                <div className="absolute inset-0 flex items-center justify-center">
                   <img 
                     src="https://i.postimg.cc/GhFRKrQZ/1779554022159.png" 
                     alt="Profile" 
-                    className="profile-image w-full h-full object-cover"
+                    className="profile-image w-full h-full object-contain"
                   />
                 </div>
               </div>
@@ -358,16 +362,12 @@ function App() {
                 100% { transform: translate(0, 0); }
               }
               
-              .profile-image-container {
-                transition: all 0.5s ease;
-              }
-              
               .profile-image {
                 transition: all 0.5s ease;
                 ${isDarkTheme ? 'filter: grayscale(80%) brightness(0.8);' : ''}
               }
               
-              .profile-image-container:hover .profile-image {
+              .profile-image:hover {
                 filter: none;
               }
             `}</style>
@@ -649,7 +649,6 @@ function App() {
                     
                     <div className="px-1">
                       <div className="aspect-w-16 aspect-h-9 relative group mb-1">
-                        {/* UPDATED: Changed to IMG tag because the source is now an image, not a video */}
                         <img
                           className="w-full h-full object-cover rounded"
                           src={projectDemos[activeDemo].image}
